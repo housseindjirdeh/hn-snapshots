@@ -1,0 +1,46 @@
+.Header {
+  background-color: #f4751e;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 16px 100px;
+  width: 100%;
+}
+
+.Header__navlink {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.Header__navlink--active {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.Header__logo {
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: 15px;
+}
+
+.Header__title {
+  color: #fff;
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .Header__title {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .Header {
+    padding: 18px 10px;
+  }
+
+  .Header__logo {
+    display: none;
+  }
+}

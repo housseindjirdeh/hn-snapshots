@@ -1,0 +1,28 @@
+.HackerNewsComment {
+  font-size: 13px;
+  padding: 10px 2px 5px 20px;
+}
+
+.HackerNewsComment__head {
+  color:  #808080;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.HackerNewsComment__inner--hide {
+  display: none;
+}
+
+.HackerNewsComment__content {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  line-height: 1.5;
+  padding: 1px;
+}
