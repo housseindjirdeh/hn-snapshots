@@ -27,7 +27,7 @@ export function fetchHackerComments(id) {
   return function thunk(dispatch) {
     dispatch(hackerCommentsFetchRequest(id));
 
-    return fetch(`https://node-hnapi.herokuapp.com/item/${id}`)
+    return fetch(`https://api.hnpwa.com/v0/item/${id}.json`)
       .then(response =>
         response.json().then(data =>
           dispatch(hackerCommentsFetchSuccess({
@@ -68,11 +68,11 @@ export function hackerNewsFetchFailure(error) {
   };
 }
 
-export function fetchHackerNews(type, page) {
+export function fetchHackerNews(type, page = 1) {
   return function thunk(dispatch) {
     dispatch(hackerNewsFetchRequest(type, page));
 
-    return fetch(`https://node-hnapi.herokuapp.com/${type}?page=${page}`)
+    return fetch(`https://api.hnpwa.com/v0/${type}/${page}.json`)
       .then(response =>
         response.json()
           .then(data => data.map((v) => {
@@ -110,7 +110,7 @@ export function fetchHackerUser(id) {
   return function thunk(dispatch) {
     dispatch(hackerUserFetchRequest(id));
 
-    return fetch(`https://node-hnapi.herokuapp.com/user/${id}`)
+    return fetch(`https://api.hnpwa.com/v0/user/${id}.json`)
       .then(response => response.json().then(data => dispatch(hackerUserFetchSuccess(data))))
       .catch(error => dispatch(hackerUserFetchFailure(error)));
   };

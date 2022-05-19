@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import hnpwaLogo from '../../assets/images/hnpwa-logo.png';
 import './Header.scss';
 
 export function makeIsActive(path) {
@@ -13,29 +12,18 @@ export function makeIsActive(path) {
 function Header() {
   return (
     <nav className="Header">
-      <Link to="/news/1" href="/news/1">
-        <img className="Header__logo" src={hnpwaLogo} alt="HNPWA Logo" />
-      </Link>
-      <NavLink
+      {/* <NavLink
         activeClassName="Header__navlink--active"
         className="Header__navlink"
-        to="/news/1"
-        isActive={makeIsActive('/news')}
+        to="/news"
+        isActive={makeIsActive('/')}
       >
         Top
-      </NavLink>
-      <NavLink
+      </NavLink> */}
+      {/* <NavLink
         activeClassName="Header__navlink--active"
         className="Header__navlink"
-        to="/newest/1"
-        isActive={makeIsActive('/newest')}
-      >
-        New
-      </NavLink>
-      <NavLink
-        activeClassName="Header__navlink--active"
-        className="Header__navlink"
-        to="/show/1"
+        to="/show"
         isActive={makeIsActive('/show')}
       >
         Show
@@ -43,7 +31,7 @@ function Header() {
       <NavLink
         activeClassName="Header__navlink--active"
         className="Header__navlink"
-        to="/ask/1"
+        to="/ask"
         isActive={makeIsActive('/ask')}
       >
         Ask
@@ -51,11 +39,11 @@ function Header() {
       <NavLink
         activeClassName="Header__navlink--active"
         className="Header__navlink"
-        to="/jobs/1"
+        to="/jobs"
         isActive={makeIsActive('/jobs')}
       >
         Jobs
-      </NavLink>
+      </NavLink> */}
       <a href="https://github.com/taehwanno/hnpwa-react" target="_blank" rel="noopener noreferrer">
         <span className="Header__title">HNPWA with React</span>
       </a>

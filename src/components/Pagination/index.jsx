@@ -29,7 +29,7 @@ function Pagination({ currentPage, onPaginate }) {
   return (
     <div className="Pagination">
       <div className="Pagination__inner">
-        <button
+        {/* <button
           className={prevButtonClassName}
           data-button="prev"
           disabled={prevDisabled}
@@ -48,7 +48,7 @@ function Pagination({ currentPage, onPaginate }) {
           onClick={() => onPaginate(currentPage + 1)}
         >
           Next {'>'}
-        </button>
+        </button> */}
       </div>
     </div>
   );

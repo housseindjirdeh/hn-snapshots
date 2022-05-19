@@ -17,13 +17,6 @@
   text-underline-position: under;
 }
 
-.Header__logo {
-  height: 20px;
-  left: 20px;
-  position: absolute;
-  top: 15px;
-}
-
 .Header__title {
   color: #fff;
   float: right;
@@ -38,9 +31,5 @@
 @media (max-width: 450px) {
   .Header {
     padding: 18px 10px;
-  }
-
-  .Header__logo {
-    display: none;
   }
 }

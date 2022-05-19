@@ -13,22 +13,22 @@ const configureStore = ({ routerMiddleware = null, preloadedState = Immutable.Ma
 
   let enhancer = applyMiddleware(...middlewares);
 
-  if (process.env.NODE_ENV !== 'production') {
-    const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-    enhancer = composeEnhancer(applyMiddleware(...middlewares));
-  }
+  // if (process.env.NODE_ENV !== 'production') {
+  //   const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  //   enhancer = composeEnhancer(applyMiddleware(...middlewares));
+  // }
 
   const store = createStore(rootReducer, preloadedState, enhancer);
 
-  if (process.env.NODE_ENV !== 'production') {
-    if (module.hot) {
-      module.hot.accept('./rootReducer', () => {
-        // eslint-disable-next-line global-require
-        const nextRootReducer = require('./rootReducer').default;
-        store.replaceReducer(nextRootReducer);
-      });
-    }
-  }
+  // if (process.env.NODE_ENV !== 'production') {
+  //   if (module.hot) {
+  //     module.hot.accept('./rootReducer', () => {
+  //       // eslint-disable-next-line global-require
+  //       const nextRootReducer = require('./rootReducer').default;
+  //       store.replaceReducer(nextRootReducer);
+  //     });
+  //   }
+  // }
 
   return store;
 };

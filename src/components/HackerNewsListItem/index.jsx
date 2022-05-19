@@ -40,21 +40,21 @@ function HackerNewsListItem({
         {points !== null && `${points} points`}
         {user && ' by '}
         {user && (
-          <Link
+          <span
             className="HackerNewsListItem__link"
             href={`/user/${user}`}
             to={`/user/${user}`}
           >
             {user}
-          </Link>
+          </span>
         )} {timeAgo} | {' '}
-        <Link
+        <span
           className="HackerNewsListItem__link"
           href={`/item/${id}/`}
           to={`/item/${id}`}
         >
           {commentsCount} comments
-        </Link>
+        </span>
       </div>
     </div>
   );
